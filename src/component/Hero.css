@@ -1,0 +1,42 @@
+#hero {
+  background-color: #255ed6;
+  width: 100vw;
+  height: 500px;
+}
+#hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#hero .hero-greeting h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#hero .hero-greeting p {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.hero-button {
+  display: flex;
+  margin-top: 20px;
+}
+
+.hero-button button {
+  background-color: #fff;
+  color: #1890ff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+.hero-button button:hover {
+  background-color: #fff;
+  color: #1890ff;
+}
