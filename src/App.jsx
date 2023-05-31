@@ -1,8 +1,11 @@
 import { useState } from "react";
 import React from "react";
 import NavbarComponent from "./component/Navbar";
-import HeroComponent from "./component/Hero";
+import Hero from "./component/Hero";
 import Spesialisasi from "./component/Spesialisasi";
+import DokterTersedia from "./component/DokterTersedia";
+import Artikel from "./component/Artikel";
+import Footer from "./component/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -17,8 +20,11 @@ function App() {
   return (
     <>
       <NavbarComponent />
-      <HeroComponent />
+      <Hero />
       <Spesialisasi />
+      <DokterTersedia />
+      <Artikel />
+      <Footer />
     </>
   );
 }

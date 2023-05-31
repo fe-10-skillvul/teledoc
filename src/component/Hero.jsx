@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./Hero.css";
 
-const HeroComponent = () => {
+const Hero = () => {
   return (
-    <section id="hero" className="mt-5">
-      <Container fluid>
+    <section id="hero">
+      <Container>
         <Row className="align-items-center">
           <Col md={6} className="hero-content">
             <div className="hero-greeting ms-md-5">
@@ -29,4 +29,4 @@ const HeroComponent = () => {
   );
 };
 
-export default HeroComponent;
+export default Hero;

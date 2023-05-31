@@ -1,0 +1,91 @@
+/* ARTIKEL */
+:root {
+  --primary: #255ed6;
+  --light-blue: #1890ff;
+  --font: #252424;
+  --white: #fffffff5;
+}
+
+.d-flex h5 {
+  font-weight: bold;
+}
+
+.row.g-0 {
+  gap: 0 20px;
+}
+
+.card-height {
+  height: 100%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+
+.container-article .badges {
+  margin: 8px 0;
+}
+
+.container-article .badge-articles {
+  padding: 8px 12px;
+  text-decoration: none;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.container-article #badge-new {
+  background-color: var(--primary);
+  color: white;
+}
+
+.container-article .badge-articles:hover {
+  background-color: var(--light-blue);
+  color: white;
+  border-color: var(--light-blue);
+}
+
+.card-height .card-body .badge {
+  padding: 6px 10px;
+  background-color: var(--light-blue);
+  font-weight: lighter;
+  width: auto;
+}
+
+.col-md.mt-sm-3 {
+  margin-top: 0;
+}
+
+.container-article .d-flex {
+  margin-top: 40px;
+}
+
+.container-article h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--font);
+}
+
+#card-article .card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--font);
+  margin-top: 5px;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  font-weight: light;
+  color: var(--font);
+}
+
+.container-article .badge {
+  padding: 10px 12px;
+}
+
+.footer .icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.footer .icons a {
+  font-size: 24px;
+}

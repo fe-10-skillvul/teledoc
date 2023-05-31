@@ -4,9 +4,9 @@ import "./Spesialisasi.css";
 
 const Spesialisasi = () => {
   return (
-    <Container className="spesialisasi container-dokter-tersedia mb-4">
-      <div className="d-flex justify-content-between align-items-center">
-        <h3>Spesialisasi Dokter</h3>
+    <Container className="spesialisasi container-dokter-tersedia mb-4 mt-4">
+      <div className="spesialisasi-title d-flex justify-content-between align-items-center">
+        <h5>Spesialisasi Dokter</h5>
         <a href="#" className="text-decoration-none">
           Lihat Semua
         </a>
@@ -26,16 +26,16 @@ const Spesialisasi = () => {
           <p className="spesialisasi-card-p">Spesialis Kulit</p>
         </Col>
         <Col md={2} className="spesialisasi-card">
-          <img src="https://i.ibb.co/BLsJ800/Spesialis-kulit.png" alt="spesialisasi-3" />
-          <p className="spesialisasi-card-p">Spesialis Kulit</p>
+          <img src="https://i.ibb.co/L0GF0WW/Spesialis-tht.png" alt="spesialisasi-4" />
+          <p className="spesialisasi-card-p">Spesialis THT</p>
         </Col>
         <Col md={2} className="spesialisasi-card">
-          <img src="https://i.ibb.co/BLsJ800/Spesialis-kulit.png" alt="spesialisasi-3" />
-          <p className="spesialisasi-card-p">Spesialis Kulit</p>
+          <img src="https://i.ibb.co/KLrYQFT/Spesialis-mata.png" alt="spesialisasi-6" />
+          <p className="spesialisasi-card-p">Spesialis Mata</p>
         </Col>
         <Col md={2} className="spesialisasi-card">
-          <img src="https://i.ibb.co/BLsJ800/Spesialis-kulit.png" alt="spesialisasi-3" />
-          <p className="spesialisasi-card-p">Spesialis Kulit</p>
+          <img src="https://i.ibb.co/J5ZHPTZ/dokter-gigi.png" alt="spesialisasi-5" />
+          <p className="spesialisasi-card-p">Dokter Gigi</p>
         </Col>
       </Row>
     </Container>
