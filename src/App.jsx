@@ -6,6 +6,8 @@ import Spesialisasi from "./component/Spesialisasi";
 import DokterTersedia from "./component/DokterTersedia";
 import Artikel from "./component/Artikel";
 import Footer from "./component/Footer";
+import SpesialisasiProvider from "./component/SpesialisasiContext";
+import { DokterProvider } from "./component/DokterContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -21,8 +23,12 @@ function App() {
     <>
       <NavbarComponent />
       <Hero />
-      <Spesialisasi />
-      <DokterTersedia />
+      <SpesialisasiProvider>
+        <Spesialisasi />
+      </SpesialisasiProvider>
+      <DokterProvider>
+        <DokterTersedia />
+      </DokterProvider>
       <Artikel />
       <Footer />
     </>

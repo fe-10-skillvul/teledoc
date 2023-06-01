@@ -1,8 +1,14 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { DokterContext } from "./DokterContext";
 import "./DokterTersedia.css";
 
 function DokterTersedia() {
+  const dokterData = useContext(DokterContext);
+
+  // Slice the dokterData array to display only the first 4 items
+  const limitedDokterData = dokterData.slice(0, 4);
+
   return (
     <Container className="dokter-tersedia mb-4">
       <div className="d-flex title justify-content-between align-items-center mb-4">
@@ -12,75 +18,26 @@ function DokterTersedia() {
         </a>
       </div>
 
-      <Row className="mt-sm-3">
-        <Col xs={12} sm={6} md={4} lg={3} className="col-doctor">
-          <div className="card doctor-card card-sm-1">
-            <img src="src\assets\img\dokter\doctor1.png" className="card-img-top" alt="" />
-            <div className="card-img-overlay p-2">
-              <h2 className="card-title doctor-name">dr. Serena Gome</h2>
-              <p className="card-text spesialisasi-text m-1">Dokter Umum</p>
-              <p className="card-text place-title m-1">
-                <small>Tempat Praktik</small>
-              </p>
-              <h4 className="m-1">RSUD dr.Soedono</h4>
-              <p className="card-text m-1">
-                <small>Harga</small>
-              </p>
-              <h4 className="m-1 price">Rp. 35.000</h4>
-            </div>
-          </div>
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3} className="col-doctor">
-          <div className="card doctor-card card-sm-1">
-            <img src="src\assets\img\dokter\doctor1.png" className="card-img-top" alt="" />
-            <div className="card-img-overlay p-2">
-              <h2 className="card-title doctor-name">dr. Serena Gome</h2>
-              <p className="card-text spesialisasi-text m-1">Dokter Umum</p>
-              <p className="card-text place-title m-1">
-                <small>Tempat Praktik</small>
-              </p>
-              <h4 className="m-1">RSUD dr.Soedono</h4>
-              <p className="card-text m-1">
-                <small>Harga</small>
-              </p>
-              <h4 className="m-1 price">Rp. 35.000</h4>
-            </div>
-          </div>
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3} className="col-doctor">
-          <div className="card doctor-card card-sm-1">
-            <img src="src\assets\img\dokter\doctor1.png" className="card-img-top" alt="" />
-            <div className="card-img-overlay p-2">
-              <h2 className="card-title doctor-name">dr. Serena Gome</h2>
-              <p className="card-text spesialisasi-text m-1">Dokter Umum</p>
-              <p className="card-text place-title m-1">
-                <small>Tempat Praktik</small>
-              </p>
-              <h4 className="m-1">RSUD dr.Soedono</h4>
-              <p className="card-text m-1">
-                <small>Harga</small>
-              </p>
-              <h4 className="m-1 price">Rp. 35.000</h4>
-            </div>
-          </div>
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3} className="col-doctor">
-          <div className="card doctor-card card-sm-1">
-            <img src="src\assets\img\dokter\doctor1.png" className="card-img-top" alt="" />
-            <div className="card-img-overlay p-2">
-              <h2 className="card-title doctor-name">dr. Serena Gome</h2>
-              <p className="card-text spesialisasi-text m-1">Dokter Umum</p>
-              <p className="card-text place-title m-1">
-                <small>Tempat Praktik</small>
-              </p>
-              <h4 className="m-1">RSUD dr.Soedono</h4>
-              <p className="card-text m-1">
-                <small>Harga</small>
-              </p>
-              <h4 className="m-1 price">Rp. 35.000</h4>
-            </div>
-          </div>
-        </Col>
+      <Row className="">
+        {limitedDokterData.map((dokter) => (
+          <Col md={3} className="col-doctor mt-sm-3" key={dokter.id}>
+            <Card className="doctor-card card-sm-1 text-bg-dark">
+              <Card.Img src={dokter.gambarDokter} className="card-img-top" alt="" />
+              <div className="card-img-overlay p-2">
+                <h2 className="card-title doctor-name">{dokter.namaDokter}</h2>
+                <p className="card-text spesialisasi-text m-1">{dokter.kategori}</p>
+                <p className="card-text place-title m-1">
+                  <small>Tempat Praktik</small>
+                </p>
+                <h4 className="m-1">{dokter.tempatPraktik}</h4>
+                <p className="card-text m-1">
+                  <small>Harga</small>
+                </p>
+                <h4 className="m-1 price">{dokter.harga}</h4>
+              </div>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
