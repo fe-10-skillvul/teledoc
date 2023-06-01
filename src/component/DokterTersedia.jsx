@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { DokterContext } from "./DokterContext";
+import { DokterContext } from "../context/DokterContext";
 import "./DokterTersedia.css";
 
 function DokterTersedia() {
@@ -18,11 +18,11 @@ function DokterTersedia() {
         </a>
       </div>
 
-      <Row className="">
+      <Row className="row-cols-1 row-cols-md-2 row-cols-lg-4">
         {limitedDokterData.map((dokter) => (
-          <Col md={3} className="col-doctor mt-sm-3" key={dokter.id}>
-            <Card className="doctor-card card-sm-1 text-bg-dark">
-              <Card.Img src={dokter.gambarDokter} className="card-img-top" alt="" />
+          <Col className="col-doctor mt-sm-3" key={dokter.id}>
+            <Card className="doctor-card card-sm-1">
+              <Card.Img src={dokter.gambarDokter} className="card-img-top" alt={dokter.namaDokter} />
               <div className="card-img-overlay p-2">
                 <h2 className="card-title doctor-name">{dokter.namaDokter}</h2>
                 <p className="card-text spesialisasi-text m-1">{dokter.kategori}</p>

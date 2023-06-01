@@ -6,8 +6,9 @@ import Spesialisasi from "./component/Spesialisasi";
 import DokterTersedia from "./component/DokterTersedia";
 import Artikel from "./component/Artikel";
 import Footer from "./component/Footer";
-import SpesialisasiProvider from "./component/SpesialisasiContext";
-import { DokterProvider } from "./component/DokterContext";
+import SpesialisasiProvider from "./context/SpesialisasiContext";
+import { DokterProvider } from "./context/DokterContext";
+import ArtikelProvider from "./context/ArticleContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -29,7 +30,10 @@ function App() {
       <DokterProvider>
         <DokterTersedia />
       </DokterProvider>
-      <Artikel />
+      <ArtikelProvider>
+        <Artikel />
+      </ArtikelProvider>
+
       <Footer />
     </>
   );

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { ArtikelContext } from "../context/ArticleContext";
 import "./Artikel.css";
 
 function Artikel() {
+  const { articles } = useContext(ArtikelContext);
+
   return (
     <Container className="container-article">
       <div className="d-flex justify-content-between align-items-center">
@@ -25,54 +28,20 @@ function Artikel() {
       </div>
 
       <Row className="text-start g-0 mt-sm-3">
-        <Col md>
-          <Card className="card-height">
-            <a href="" className="card-article text-decoration-none">
-              <Card.Img src="src\assets\img\dokter\doctor1.png" style={{ height: "150px" }} alt="gambar" />
-              <Card.Body>
-                <div className="badge text-wrap mb-1">Makanan Sehat</div>
-                <Card.Title>shortTitle</Card.Title>
-                <Card.Text>shortDescription</Card.Text>
-              </Card.Body>
-            </a>
-          </Card>
-        </Col>
-        <Col md>
-          <Card className="card-height">
-            <a href="" className="card-article text-decoration-none">
-              <Card.Img src="src\assets\img\dokter\doctor1.png" style={{ height: "150px" }} alt="gambar" />
-              <Card.Body>
-                <div className="badge text-wrap mb-1">Makanan Sehat</div>
-                <Card.Title>shortTitle</Card.Title>
-                <Card.Text>shortDescription</Card.Text>
-              </Card.Body>
-            </a>
-          </Card>
-        </Col>
-        <Col md>
-          <Card className="card-height">
-            <a href="" className="card-article text-decoration-none">
-              <Card.Img src="src\assets\img\dokter\doctor1.png" style={{ height: "150px" }} alt="gambar" />
-              <Card.Body>
-                <div className="badge text-wrap mb-1">Makanan Sehat</div>
-                <Card.Title>shortTitle</Card.Title>
-                <Card.Text>shortDescription</Card.Text>
-              </Card.Body>
-            </a>
-          </Card>
-        </Col>
-        <Col md>
-          <Card className="card-height">
-            <a href="" className="card-article text-decoration-none">
-              <Card.Img src="src\assets\img\dokter\doctor1.png" style={{ height: "150px" }} alt="gambar" />
-              <Card.Body>
-                <div className="badge text-wrap mb-1">Makanan Sehat</div>
-                <Card.Title>shortTitle</Card.Title>
-                <Card.Text>shortDescription</Card.Text>
-              </Card.Body>
-            </a>
-          </Card>
-        </Col>
+        {articles.slice(0, 4).map((article) => (
+          <Col xs={12} sm={6} md={6} lg={3} key={article.id}>
+            <Card className="card-height m-2">
+              <a href="" className="card-article text-decoration-none">
+                <Card.Img src={article.gambar} style={{ height: "150px" }} alt="gambar" />
+                <Card.Body>
+                  <div className="badge text-wrap mb-1">{article.kategori}</div>
+                  <Card.Title className="card-title">{article.judul}</Card.Title>
+                  <Card.Text className="card-text">{article.deskripsi}</Card.Text>
+                </Card.Body>
+              </a>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </Container>
   );

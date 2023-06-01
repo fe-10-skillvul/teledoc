@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Spesialisasi.css";
-import { SpesialisasiContext } from "./SpesialisasiContext";
+import { SpesialisasiContext } from "../context/SpesialisasiContext";
 
 const Spesialisasi = () => {
   const spesialisasi = useContext(SpesialisasiContext);
@@ -24,19 +24,19 @@ const Spesialisasi = () => {
           <p className="spesialisasi-card-p">{spesialisasi[1]?.namaKategori}</p>
         </Col>
         <Col md={2} className="spesialisasi-card">
-          <img src={spesialisasi[2]?.gambarKategori} alt="spesialisasi-2" />
+          <img src={spesialisasi[2]?.gambarKategori} alt="spesialisasi-3" />
           <p className="spesialisasi-card-p">{spesialisasi[2]?.namaKategori}</p>
         </Col>
         <Col md={2} className="spesialisasi-card">
-          <img src={spesialisasi[3]?.gambarKategori} alt="spesialisasi-2" />
+          <img src={spesialisasi[3]?.gambarKategori} alt="spesialisasi-4" />
           <p className="spesialisasi-card-p">{spesialisasi[3]?.namaKategori}</p>
         </Col>
         <Col md={2} className="spesialisasi-card">
-          <img src={spesialisasi[4]?.gambarKategori} alt="spesialisasi-2" />
+          <img src={spesialisasi[4]?.gambarKategori} alt="spesialisasi-5" />
           <p className="spesialisasi-card-p">{spesialisasi[4]?.namaKategori}</p>
         </Col>
         <Col md={2} className="spesialisasi-card">
-          <img src={spesialisasi[5]?.gambarKategori} alt="spesialisasi-2" />
+          <img src={spesialisasi[5]?.gambarKategori} alt="spesialisasi-6" />
           <p className="spesialisasi-card-p">{spesialisasi[5]?.namaKategori}</p>
         </Col>
       </Row>
