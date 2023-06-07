@@ -65,7 +65,7 @@ function PopularArticles() {
                 <Card id="otherArticles" className="mb-3" style={{ height: "150px" }}>
                   <Row className="g-0">
                     <Col md={4}>
-                      <Card.Img style={{ height: "148px", width: "150" }} src={item && item.gambar} />
+                      <Card.Img style={{ height: "148px", width: "150px" }} src={item && item.gambar} className="card-image" />
                     </Col>
                     <Col md={8}>
                       <Card.Body>

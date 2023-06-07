@@ -14,4 +14,8 @@
   text-overflow: ellipsis;
 }
 
-
+@media (max-width: 576px) {
+  .card-image {
+    display: none;
+  }
+}
