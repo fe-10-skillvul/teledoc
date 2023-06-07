@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { ArtikelContext } from "../context/ArticleContext";
+import { Link } from "react-router-dom";
 import "./Artikel.css";
 
 function Artikel() {
@@ -10,9 +11,9 @@ function Artikel() {
     <Container className="container-article">
       <div className="d-flex justify-content-between align-items-center">
         <h5>Artikel</h5>
-        <a href="" className="text-decoration-none">
+        <Link to="/daftar-artikel" className="text-decoration-none">
           Lihat Semua
-        </a>
+        </Link>
       </div>
 
       <div className="badges">

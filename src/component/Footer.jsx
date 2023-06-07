@@ -6,7 +6,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <Container>
+      <Container fluid>
         <Row>
           <Col md={4} className="label-footer mt-3">
             <a href="/" className="logofooter">

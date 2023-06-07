@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavbarComponent from "./component/Navbar";
 import Hero from "./component/Hero";
 import Spesialisasi from "./component/Spesialisasi";
@@ -9,17 +10,23 @@ import Footer from "./component/Footer";
 import SpesialisasiProvider from "./context/SpesialisasiContext";
 import { DokterProvider } from "./context/DokterContext";
 import ArtikelProvider from "./context/ArticleContext";
+import { TopicSelection, PopularArticles, NewArticles } from "./component/DaftarArtikel";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 
 function App() {
-  React.useEffect(() => {
-    const metaTag = document.createElement("meta");
-    metaTag.name = "viewport";
-    metaTag.content = "width=device-width, initial-scale=1.0";
-    document.head.appendChild(metaTag);
-  }, []);
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/daftar-artikel" element={<DaftarArtikelPage />} />
+      </Routes>
+    </Router>
+  );
+}
 
+function Home() {
   return (
     <>
       <NavbarComponent />
@@ -32,6 +39,20 @@ function App() {
       </DokterProvider>
       <ArtikelProvider>
         <Artikel />
+      </ArtikelProvider>
+      <Footer />
+    </>
+  );
+}
+
+function DaftarArtikelPage() {
+  return (
+    <>
+      <NavbarComponent />
+      <ArtikelProvider>
+        <TopicSelection />
+        <PopularArticles />
+        <NewArticles />
       </ArtikelProvider>
 
       <Footer />
