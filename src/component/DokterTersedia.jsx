@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { DokterContext } from "../context/DokterContext";
 import "./DokterTersedia.css";
@@ -13,9 +14,9 @@ function DokterTersedia() {
     <Container className="dokter-tersedia mb-4">
       <div className="d-flex title justify-content-between align-items-center mb-4">
         <h5>Dokter yang Tersedia</h5>
-        <a href="" className="text-decoration-none">
+        <Link to="/daftar-dokter" className="text-decoration-none">
           Lihat Semua
-        </a>
+        </Link>
       </div>
 
       <Row className="row-cols-1 row-cols-md-2 row-cols-lg-4">

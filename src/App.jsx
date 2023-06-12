@@ -12,8 +12,9 @@ import { DokterProvider } from "./context/DokterContext";
 import ArtikelProvider from "./context/ArticleContext";
 import { TopicSelection, PopularArticles, NewArticles } from "./component/DaftarArtikel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import DetailArtikel from "./component/DetailArtikel";
 import "./App.css";
+import DaftarDokter from "./component/DaftarDokter";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/daftar-artikel" element={<DaftarArtikelPage />} />
+        <Route path="/detail-artikel/:id" element={<DetailArtikelPage />} />
+        <Route path="/daftar-dokter" element={<DaftarDokterPage />} />
       </Routes>
     </Router>
   );
@@ -60,4 +63,27 @@ function DaftarArtikelPage() {
   );
 }
 
+function DetailArtikelPage() {
+  return (
+    <>
+      <NavbarComponent />
+      <ArtikelProvider>
+        <DetailArtikel />
+      </ArtikelProvider>
+      <Footer />
+    </>
+  );
+}
+
+function DaftarDokterPage() {
+  return (
+    <>
+      <NavbarComponent />
+      <DokterProvider>
+        <DaftarDokter />
+      </DokterProvider>
+      <Footer />
+    </>
+  );
+}
 export default App;

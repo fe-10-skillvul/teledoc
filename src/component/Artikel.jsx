@@ -32,14 +32,14 @@ function Artikel() {
         {articles.slice(0, 4).map((article) => (
           <Col xs={12} sm={6} md={6} lg={3} key={article.id}>
             <Card className="card-height m-2">
-              <a href="" className="card-article text-decoration-none">
+              <Link to={`/detail-artikel/${article.id}`} className="card-article text-decoration-none">
                 <Card.Img src={article.gambar} style={{ height: "150px" }} alt="gambar" />
                 <Card.Body>
                   <div className="badge text-wrap mb-1">{article.kategori}</div>
                   <Card.Title className="card-title">{article.judul}</Card.Title>
                   <Card.Text className="card-text">{article.deskripsi}</Card.Text>
                 </Card.Body>
-              </a>
+              </Link>
             </Card>
           </Col>
         ))}
