@@ -21,6 +21,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/beranda" element={<Home />} />
+        <Route path="/dokter" element={<DaftarDokterPage />} />
+        <Route path="/notifikasi" element={<Home />} />
+        <Route path="/artikel" element={<DaftarArtikelPage />} />
         <Route path="/daftar-artikel" element={<DaftarArtikelPage />} />
         <Route path="/detail-artikel/:id" element={<DetailArtikelPage />} />
         <Route path="/daftar-dokter" element={<DaftarDokterPage />} />

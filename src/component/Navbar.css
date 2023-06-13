@@ -52,3 +52,8 @@
   background-color: var(--primary);
   border-color: var(--primary);
 }
+
+.navbar .nav .nav-link.active {
+  background-color: blue !important;
+  color: white !important;
+}
