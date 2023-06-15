@@ -18,10 +18,9 @@ function DokterTersedia() {
           Lihat Semua
         </Link>
       </div>
-
       <Row className="row-cols-1 row-cols-md-2 row-cols-lg-4">
         {limitedDokterData.map((dokter) => (
-          <Col className="col-doctor mt-sm-3" key={dokter.id}>
+          <Col className="col-doctor" key={dokter.id}>
             <Card className="doctor-card card-sm-1">
               <Card.Img src={dokter.gambarDokter} className="card-img-top" alt={dokter.namaDokter} />
               <div className="card-img-overlay p-2">
