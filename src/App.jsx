@@ -10,11 +10,16 @@ import Footer from "./component/Footer";
 import SpesialisasiProvider from "./context/SpesialisasiContext";
 import { DokterProvider } from "./context/DokterContext";
 import ArtikelProvider from "./context/ArticleContext";
-import { TopicSelection, PopularArticles, NewArticles } from "./component/DaftarArtikel";
+import {
+  TopicSelection,
+  PopularArticles,
+  NewArticles,
+} from "./component/DaftarArtikel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DetailArtikel from "./component/DetailArtikel";
 import "./App.css";
 import DaftarDokter from "./component/DaftarDokter";
+import SpesialisasiDokter from "./component/SpesialisasiDokter/SpesialisasiDokter";
 
 function App() {
   return (
@@ -24,6 +29,7 @@ function App() {
         <Route path="/daftar-artikel" element={<DaftarArtikelPage />} />
         <Route path="/detail-artikel/:id" element={<DetailArtikelPage />} />
         <Route path="/daftar-dokter" element={<DaftarDokterPage />} />
+        <Route path="/spesialisasi-dokter" element={<SpesialisasiDokterPage />} />
       </Routes>
     </Router>
   );
@@ -86,4 +92,18 @@ function DaftarDokterPage() {
     </>
   );
 }
+
+// Page Spesialisasi Dokter
+function SpesialisasiDokterPage() {
+  return (
+    <>
+      <NavbarComponent />
+      <SpesialisasiProvider>
+        <SpesialisasiDokter />
+      </SpesialisasiProvider>
+      <Footer />
+    </>
+  );
+}
+
 export default App;
