@@ -1,0 +1,143 @@
+.phone {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.card {
+    width: 810px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  #title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #40A9FF;
+  }
+
+  #title img {
+    margin-top: -5px;
+  }
+  
+  #subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  #payment-container,
+  #transaction-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  #payment-method,
+  #dana,
+  #transaction-date,
+  #transaction-time {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+  }
+  
+  #total-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    margin: 20px 0;
+    background: #D9D9D9;
+    border-radius: 6px;
+  }
+  
+  #total-title {
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+  }
+  
+  #total-amount {
+    font-weight: 700;
+    padding: 5px;
+    margin-top: 5px;
+    color: #1890FF;
+  }
+  
+  #continue-text {
+    text-align: center;
+  }
+  
+
+  .need-help-container {
+    margin: 50px;
+  }
+
+  .need-help p {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .need-help a {
+    font-weight: 500;
+  }
+
+  .need-help-text {
+    color: #40A9FF;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 1199px) {
+    /* Styling untuk Laptop L dan Laptop */
+    .card {
+      width: 600px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    /* Styling untuk Tablet dan Mobile L */
+    .card {
+      width: 500px;
+      padding: 30px;
+    }
+  
+    #title {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Styling untuk Mobile M */
+    .card {
+      width: 400px;
+      padding: 20px;
+    }
+  
+    #title {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    /* Styling untuk Mobile S */
+    .card {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    #title {
+      font-size: 16px;
+    }
+  }

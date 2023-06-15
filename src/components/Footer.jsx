@@ -10,7 +10,7 @@ function Footer() {
         <Row>
           <Col md={4} className="label-footer mt-3">
             <a href="/" className="logofooter">
-              <img src="src\assets\img\logo.png" alt="TeleDoc" width="120" height="38" />
+              <img src="src\assets\img\logo\logo.png" alt="TeleDoc" width="50" height="30"/>
             </a>
           </Col>
           <Col md={4} className="sitemap-footer mt-3">
@@ -44,6 +44,7 @@ function Footer() {
             <p>© TeleDoc, 2023. ALL RIGHT RESERVED</p>
           </Col>
           <Col md={6} className="icons">
+            <h6 className="link">Follow kami di</h6>
             <a href="#">
               <FiInstagram />
             </a>

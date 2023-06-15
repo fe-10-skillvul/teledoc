@@ -7,7 +7,7 @@ function NavbarComponent() {
     <Navbar collapseOnSelect expand="lg" bg="light" className="navbar" fixed="top">
       <Container>
         <Navbar.Brand href="#home" className="ms-3">
-          <img src="src\assets\img\logo.png" alt="TeleDoc" height={30} />
+          <img src="src\assets\img\logo\logo.png" alt="TeleDoc" height={30} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="responsive-navbar-nav">

@@ -1,20 +1,25 @@
 import { useState } from "react";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavbarComponent from "./component/Navbar";
-import Hero from "./component/Hero";
-import Spesialisasi from "./component/Spesialisasi";
-import DokterTersedia from "./component/DokterTersedia";
-import Artikel from "./component/Artikel";
-import Footer from "./component/Footer";
+import NavbarComponent from "./components/Navbar";
+import Hero from "./components/Hero";
+import Spesialisasi from "./components/Spesialisasi";
+import DokterTersedia from "./components/DokterTersedia";
+import Artikel from "./components/Artikel";
+import Footer from "./components/Footer";
 import SpesialisasiProvider from "./context/SpesialisasiContext";
 import { DokterProvider } from "./context/DokterContext";
 import ArtikelProvider from "./context/ArticleContext";
-import { TopicSelection, PopularArticles, NewArticles } from "./component/DaftarArtikel";
+import { TopicSelection, PopularArticles, NewArticles } from "./components/DaftarArtikel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import DetailArtikel from "./component/DetailArtikel";
+import DetailArtikel from "./components/DetailArtikel";
+import DaftarDokter from "./components/DaftarDokter";
+import ProfileDokter from './components/Dokter/ProfileDokter';
+// import MessageDokter from './components/Dokter/MessageDokter';
+// import Invoice from "./components/Dokter/Invoice";
+// import PaymentStatus from "./components/Dokter/PaymentStatus";
 import "./App.css";
-import DaftarDokter from "./component/DaftarDokter";
+
 
 function App() {
   return (
@@ -81,6 +86,7 @@ function DaftarDokterPage() {
       <NavbarComponent />
       <DokterProvider>
         <DaftarDokter />
+        <ProfileDokter />
       </DokterProvider>
       <Footer />
     </>
