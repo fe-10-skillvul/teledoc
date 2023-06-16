@@ -1,13 +1,35 @@
-import React, { useState } from "react";
-import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Navbar, Container, Nav, Button, Overlay, Popover } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa"; // Import ikon profil
 import "./Navbar.css";
 
 function NavbarComponent() {
-  const [activeLink, setActiveLink] = useState(""); // State untuk melacak link yang aktif
+  const [activeLink, setActiveLink] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showPopover, setShowPopover] = useState(false);
+  const [target, setTarget] = useState(null);
+
+  useEffect(() => {
+    // Cek status login saat komponen dimuat
+    const loggedInStatus = localStorage.getItem("isLoggedIn");
+    setIsLoggedIn(loggedInStatus === "true");
+  }, []);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+  };
+
+  const handleProfileClick = (event) => {
+    setShowPopover(!showPopover);
+    setTarget(event.target);
+  };
+
+  const handleLogout = () => {
+    // Lakukan proses logout di sini (misalnya, menghapus token atau mengatur status login sebagai false)
+    localStorage.setItem("isLoggedIn", "false");
+    setIsLoggedIn(false);
+    setShowPopover(false);
   };
 
   return (
@@ -34,7 +56,26 @@ function NavbarComponent() {
           </Nav>
 
           <Nav className="ms-auto">
-            <Button variant="outline-success">Masuk</Button>
+            {isLoggedIn ? (
+              <>
+                <div className="profile-button" onClick={handleProfileClick} style={{ cursor: "pointer" }}>
+                  <FaUserCircle className="profile-icon" size={30} />
+                </div>
+                <Overlay show={showPopover} target={target} placement="bottom-end" onHide={() => setShowPopover(false)}>
+                  <Popover id="popover-profile">
+                    <Popover.Body>
+                      <Button onClick={handleLogout} style={{ backgroundColor: "black" }}>
+                        Keluar
+                      </Button>
+                    </Popover.Body>
+                  </Popover>
+                </Overlay>
+              </>
+            ) : (
+              <Link to="/login">
+                <Button variant="outline-success">Masuk</Button>
+              </Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
