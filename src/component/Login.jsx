@@ -1,7 +1,8 @@
 import { CgSpinner } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
+import { Container } from "react-bootstrap";
 import OtpInput from "otp-input-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { auth } from "../firebase.config";
@@ -15,7 +16,7 @@ const Login = () => {
   const [showOTP, setShowOTP] = useState(false);
   const [user, setUser] = useState(null);
 
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   function onCaptchVerify() {
     if (!window.recaptchaVerifier) {
@@ -62,6 +63,8 @@ const Login = () => {
         console.log(res);
         setUser(res.user);
         setLoading(false);
+        localStorage.setItem("isLoggedIn", "true"); // Set status login sebagai "true" saat berhasil login
+        navigate("/beranda"); // Menggunakan 'navigate' untuk navigasi ke halaman LandingPage
       })
       .catch((err) => {
         console.log(err);
@@ -70,19 +73,21 @@ const Login = () => {
   }
 
   return (
-    <section
-      className="bg-emerald-500 flex items-center justify-center h-screen"
+    <Container
+      fluid
+      className="bg-emerald-500 flex items-center justify-center h-screen "
       style={{
         backgroundImage: "url('https://i.ibb.co/SX1bL6f/bg-login.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        marginTop: "58px",
       }}
     >
       <div>
         <Toaster toastOptions={{ duration: 4000 }} />
         <div id="recaptcha-container"></div>
         {user ? (
-          history.push("/LandingPage") //  Navigate ke landing page
+          history.push("/beranda") //  Navigate ke landing page
         ) : (
           <div className="w-80 flex flex-col gap-4 rounded-lg p-4">
             <h1 className="text-center leading-normal text-white font-medium text-3xl mb-6">
@@ -105,7 +110,7 @@ const Login = () => {
                   Masukkan Nomor Ponsel Anda
                 </label>
                 <PhoneInput country={"id"} value={ph} onChange={setPh} />
-                <button onClick={onSignup} className="bg-emerald-600 w-full flex gap-1 items-center justify-center py-2.5 text-white rounded">
+                <button onClick={onSignup} className="bg-emerald-600 w-full flex gap-1 items-center justify-center py-2.5 text-white rounded " style={{ backgroundColor: "black" }}>
                   {loading && <CgSpinner size={20} className="mt-1 animate-spin" />}
                   <span>Lanjut</span>
                 </button>
@@ -114,7 +119,7 @@ const Login = () => {
           </div>
         )}
       </div>
-    </section>
+    </Container>
   );
 };
 
