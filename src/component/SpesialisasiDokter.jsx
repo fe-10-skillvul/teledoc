@@ -8,7 +8,7 @@ const SpesialisasiDokter = () => {
   const spesialisasi = useContext(SpesialisasiContext);
 
   return (
-    <Container fluid className="spesialisasi container-dokter-tersedia mb-4 mt-4">
+    <Container fluid className="spesialisasi container-dokter-tersedia " style={{ marginTop: "80px" }}>
       <div className="spesialisasi-title d-flex justify-content-between align-items-center">
         <h5>Spesialisasi Dokter</h5>
       </div>
