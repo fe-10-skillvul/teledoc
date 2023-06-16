@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/beranda" element={<LandingPage />} />
         <Route path="/dokter" element={<DaftarDokterPage />} />
-        <Route path="/notifikasi" element={<SpesialisasiPage />} />
+        <Route path="/notifikasi" element={<LandingPage />} />
         <Route path="/artikel" element={<DaftarArtikelPage />} />
         <Route path="/daftar-spesialisasi" element={<SpesialisasiPage />} />
         <Route path="/daftar-artikel" element={<DaftarArtikelPage />} />

@@ -19,10 +19,10 @@ const SpesialisasiDokter = () => {
             <Link to="/daftar-dokter" className="text-decoration-none">
               {" "}
               {/*Navigate ke daftar dokter */}
-              <a href="https://6459d17795624ceb21f0335f.mockapi.io/dokter">
-                <img src={item.gambarKategori} alt={`spesialisasi-${index + 1}`} />
-                <p className="spesialisasi-card-p">{item.namaKategori}</p>
-              </a>
+              <img src={item.gambarKategori} alt={`spesialisasi-${index + 1}`} />
+              <p className="spesialisasi-card-p" style={{ color: "black" }}>
+                {item.namaKategori}
+              </p>
             </Link>
           </Col>
         ))}
