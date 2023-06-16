@@ -8,7 +8,7 @@ const PaymentStatus = () => {
     <Card className="payment-status">
       <Card.Body>
         <div className="text-center mb-5">
-          <img src="/src/assets/img/check/check2.png" alt="Check" className="check-img" />
+          <img src="https://i.ibb.co/xJqRjX1/check2.png" alt="Check" className="check-img" />
         </div>
         <Card.Title className="transaction text-center mb-3">Transaksi berhasil!</Card.Title>
         <Card.Text className="success text-center mb-5">Selamat, pembayaran anda telah berhasil</Card.Text>
