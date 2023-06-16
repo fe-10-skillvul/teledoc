@@ -1,10 +1,14 @@
+.navbar-invoice {
+  width: 1348px;
+}
+
 .phone {
   color: #ffffff;
   font-weight: 500;
   font-size: 20px;
 }
 
-.card {
+.card-invoice {
   width: 810px;
   background: #ffffff;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
@@ -99,14 +103,17 @@
 
 @media (max-width: 1199px) {
   /* Styling untuk Laptop L dan Laptop */
-  .card {
+  .navbar-invoice {
+    width: auto;
+  }
+  .card-invoice {
     width: 600px;
   }
 }
 
 @media (max-width: 991px) {
   /* Styling untuk Tablet dan Mobile L */
-  .card {
+  .card-invoice {
     width: 500px;
     padding: 30px;
   }
@@ -118,7 +125,7 @@
 
 @media (max-width: 767px) {
   /* Styling untuk Mobile M */
-  .card {
+  .card-invoice {
     width: 400px;
     padding: 20px;
   }
@@ -130,7 +137,7 @@
 
 @media (max-width: 575px) {
   /* Styling untuk Mobile S */
-  .card {
+  .card-invoice {
     width: 100%;
     padding: 15px;
   }

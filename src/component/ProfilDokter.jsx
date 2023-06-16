@@ -46,9 +46,7 @@ const ProfileDokter = () => {
 
       <div className="profile-dokter mr-3">
         <h3>Profile Dokter</h3>
-        <p>
-          {dokter.namaDokter} adalah seorang dokter umum yang tergabung dalam organisasi Ikatan Dokter Indonesia (IDI). <br /> Saat ini, beliau dapat membantu memberikan pelayanan medis seperti konsultasi kesehatan umum.
-        </p>
+        <p>{dokter.namaDokter} adalah seorang dokter umum yang tergabung dalam organisasi Ikatan Dokter Indonesia (IDI). Saat ini, beliau dapat membantu memberikan pelayanan medis seperti konsultasi kesehatan umum.</p>
       </div>
 
       <div className="profile-section">
@@ -60,8 +58,7 @@ const ProfileDokter = () => {
         <h3>Riwayat Pendidikan</h3>
         <p>dr. - Kedokteran Umum - Universitas Trisakti</p>
       </div>
-
-      <div className="profile-section">
+      <div className="profile-section ">
         <h3>Lokasi & Jadwal Praktik</h3>
         <div className="location-container">
           <div className="hospital-details">

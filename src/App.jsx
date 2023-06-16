@@ -7,6 +7,7 @@ import DaftarDokterPage from "./pages/DaftarDokterPage";
 import ProfilDokterPage from "./pages/ProfilDokterPage";
 import PesanDokterPage from "./pages/PesanDokterPage";
 import Invoice from "./component/Invoice";
+import StatusPembPage from "./pages/StatusPembPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/beranda" element={<LandingPage />} />
         <Route path="/dokter" element={<DaftarDokterPage />} />
-        <Route path="/notifikasi" element={<Invoice />} />
+        <Route path="/notifikasi" element={<StatusPembPage />} />
         <Route path="/artikel" element={<DaftarArtikelPage />} />
         <Route path="/daftar-artikel" element={<DaftarArtikelPage />} />
         <Route path="/detail-artikel/:id" element={<DetailArtikelPage />} />
@@ -25,6 +26,7 @@ function App() {
         <Route path="/profil-dokter/:id" element={<ProfilDokterPage />} />
         <Route path="/pesan-dokter/:id" element={<PesanDokterPage />} />
         <Route path="/invoice" element={<Invoice />} />
+        <Route path="/payment-status" element={<StatusPembPage />} />
       </Routes>
     </Router>
   );

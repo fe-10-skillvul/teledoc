@@ -11,7 +11,6 @@ function PesanDokterPage() {
       <DokterProvider>
         <PesanDokter />
       </DokterProvider>
-      <Footer />
     </>
   );
 }
