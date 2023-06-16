@@ -8,6 +8,7 @@ import ProfilDokterPage from "./pages/ProfilDokterPage";
 import PesanDokterPage from "./pages/PesanDokterPage";
 import Invoice from "./component/Invoice";
 import StatusPembPage from "./pages/StatusPembPage";
+import SpesialisasiPage from "./pages/SpesialisasiPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -18,8 +19,9 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/beranda" element={<LandingPage />} />
         <Route path="/dokter" element={<DaftarDokterPage />} />
-        <Route path="/notifikasi" element={<StatusPembPage />} />
+        <Route path="/notifikasi" element={<SpesialisasiPage />} />
         <Route path="/artikel" element={<DaftarArtikelPage />} />
+        <Route path="/daftar-spesialisasi" element={<SpesialisasiPage />} />
         <Route path="/daftar-artikel" element={<DaftarArtikelPage />} />
         <Route path="/detail-artikel/:id" element={<DetailArtikelPage />} />
         <Route path="/daftar-dokter" element={<DaftarDokterPage />} />

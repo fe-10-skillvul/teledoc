@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Spesialisasi.css";
 import { SpesialisasiContext } from "../context/SpesialisasiContext";
 
@@ -10,9 +11,9 @@ const Spesialisasi = () => {
     <Container className="spesialisasi container-dokter-tersedia mb-4 mt-4">
       <div className="spesialisasi-title d-flex justify-content-between align-items-center">
         <h5>Spesialisasi Dokter</h5>
-        <a href="#" className="text-decoration-none">
+        <Link to="/daftar-spesialisasi" className="text-decoration-none">
           Lihat Semua
-        </a>
+        </Link>
       </div>
       <Row>
         <Col md={2} className="spesialisasi-card">
