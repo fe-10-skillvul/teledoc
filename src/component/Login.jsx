@@ -80,6 +80,8 @@ const Login = () => {
         backgroundImage: "url('https://i.ibb.co/SX1bL6f/bg-login.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        width: "1366px",
+        height: "600px",
         marginTop: "58px",
       }}
     >

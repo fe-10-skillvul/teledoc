@@ -7,13 +7,13 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyC0Q5C-m9TezumiNJ29PdoyZ-1nbuLyV0s",
-  authDomain: "login-teledoc.firebaseapp.com",
-  projectId: "login-teledoc",
-  storageBucket: "login-teledoc.appspot.com",
-  messagingSenderId: "561692440701",
-  appId: "1:561692440701:web:1774bf4c12d0b7cf139914",
-  measurementId: "G-7P1GQ4JC2W",
+  apiKey: "AIzaSyAPvkkPYw3LO5q86-kNjbJA55m5iGQ65W4",
+  authDomain: "otp-teledoc-5c04e.firebaseapp.com",
+  projectId: "otp-teledoc-5c04e",
+  storageBucket: "otp-teledoc-5c04e.appspot.com",
+  messagingSenderId: "1038933747144",
+  appId: "1:1038933747144:web:d428dc1f33fc229fe30cfd",
+  measurementId: "G-E3YZPN8M84",
 };
 
 // Initialize Firebase
