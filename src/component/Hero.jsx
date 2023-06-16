@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 const Hero = () => {
@@ -17,7 +18,9 @@ const Hero = () => {
               Semua Ada di TeleDoc.
             </p>
             <div className="hero-button">
-              <Button>Konsultasi Sekarang</Button>
+              <Link to="/daftar-dokter" className="text-decoration-none">
+                <Button>Konsultasi Sekarang</Button>
+              </Link>
             </div>
           </div>
         </Col>

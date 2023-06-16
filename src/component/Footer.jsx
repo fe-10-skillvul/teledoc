@@ -10,7 +10,7 @@ function Footer() {
         <Row>
           <Col md={4} className="label-footer mt-3">
             <a href="/" className="logofooter">
-              <img src="src\assets\img\logo.png" alt="TeleDoc" width="120" height="38" />
+              <img src="https://i.ibb.co/WFN1kzQ/logo.png" alt="TeleDoc" width="120" height="38" />
             </a>
           </Col>
           <Col md={4} className="sitemap-footer mt-3">

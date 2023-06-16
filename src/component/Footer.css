@@ -2,6 +2,7 @@
   margin-top: 32px;
   background-color: #284450;
   width: auto;
+  max-width: 100%;
   color: white;
   bottom: 0;
   flex-shrink: 0;
@@ -42,4 +43,16 @@
   justify-content: space-around;
   border-top: 1px solid #ffffff;
   padding: 22px 7%;
+}
+
+@media (max-width: 850px) {
+  .footer {
+    width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    width: auto;
+  }
 }
