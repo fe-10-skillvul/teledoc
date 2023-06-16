@@ -34,7 +34,9 @@ function NavbarComponent() {
           </Nav>
 
           <Nav className="ms-auto">
-            <Button variant="outline-success">Masuk</Button>
+            <Link to="/login">
+              <Button variant="outline-success">Masuk</Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
