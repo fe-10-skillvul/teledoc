@@ -63,7 +63,7 @@ const ProfileDokter = () => {
         <div className="location-container">
           <div className="hospital-details">
             <div className="hospital-image">
-              <img src="/src/assets/img/tempat-praktik.png" alt="" className="img-fluid rounded-start" />
+              <img src="https://i.ibb.co/J3ySFtD/tempat-praktik.png" alt="" className="img-fluid rounded-start" />
             </div>
             <div className="hospital-name">
               <p>{dokter.tempatPraktik}</p>
