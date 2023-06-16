@@ -64,7 +64,7 @@ function NavbarComponent() {
                 <Overlay show={showPopover} target={target} placement="bottom-end" onHide={() => setShowPopover(false)}>
                   <Popover id="popover-profile">
                     <Popover.Body>
-                      <Button variant="link" onClick={handleLogout}>
+                      <Button onClick={handleLogout} style={{ backgroundColor: "black" }}>
                         Keluar
                       </Button>
                     </Popover.Body>

@@ -1,6 +1,6 @@
 import { CgSpinner } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import OtpInput from "otp-input-react";
 import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
@@ -80,9 +80,8 @@ const Login = () => {
         backgroundImage: "url('https://i.ibb.co/SX1bL6f/bg-login.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: "1366px",
-        height: "600px",
-        marginTop: "58px",
+        width: "1346px",
+        height: "700px",
       }}
     >
       <div>
@@ -92,30 +91,34 @@ const Login = () => {
           history.push("/beranda") //  Navigate ke landing page
         ) : (
           <div className="w-80 flex flex-col gap-4 rounded-lg p-4">
-            <h1 className="text-center leading-normal text-white font-medium text-3xl mb-6">
+            <h1 className="text-start leading-normal text-white font-medium text-3xl mb-5">
               <img src="https://i.ibb.co/WFN1kzQ/logo.png" alt="Teledoc" />
             </h1>
             {showOTP ? (
               <>
-                <label htmlFor="otp" className="font-bold text-xl text-white text-center">
-                  Masukkan PIN Anda
-                </label>
-                <OtpInput value={otp} onChange={setOtp} OTPLength={6} otpType="number" disabled={false} autoFocus className="opt-container "></OtpInput>
-                <button onClick={onOTPVerify} className="bg-emerald-600 w-full flex gap-1 items-center justify-center py-2.5 text-white rounded">
-                  {loading && <CgSpinner size={20} className="mt-1 animate-spin" />}
-                  <span>Verify OTP</span>
-                </button>
+                <Card className="flex flex-col gap-4 rounded-lg p-4" style={{ backgroundColor: "rgba(255, 255, 255, 0.8)", width: "fit-content" }}>
+                  <label htmlFor="otp" className="font-bold text-xl text-black text-center mb-3">
+                    Masukkan PIN Anda
+                  </label>
+                  <OtpInput value={otp} onChange={setOtp} OTPLength={6} otpType="number" disabled={false} autoFocus className="opt-container mb-3"></OtpInput>
+                  <button onClick={onOTPVerify} className="bg-emerald-600 w-full flex gap-1 items-center justify-center py-2.5 text-white rounded" style={{ backgroundColor: "black" }}>
+                    {loading && <CgSpinner size={20} className="mt-1 animate-spin" />}
+                    <span>Verify OTP</span>
+                  </button>
+                </Card>
               </>
             ) : (
               <>
-                <label htmlFor="" className="font-bold text-xl text-white text-center">
-                  Masukkan Nomor Ponsel Anda
-                </label>
-                <PhoneInput country={"id"} value={ph} onChange={setPh} />
-                <button onClick={onSignup} className="bg-emerald-600 w-full flex gap-1 items-center justify-center py-2.5 text-white rounded " style={{ backgroundColor: "black" }}>
-                  {loading && <CgSpinner size={20} className="mt-1 animate-spin" />}
-                  <span>Lanjut</span>
-                </button>
+                <Card className="flex flex-col gap-4 rounded-lg p-4 items-center justify-center" style={{ backgroundColor: "rgba(255, 255, 255, 0.8)", width: "fit-content" }}>
+                  <label htmlFor="" className="font-bold text-xl text-black text-start mb-2">
+                    Masukkan Nomor Ponsel Anda
+                  </label>
+                  <PhoneInput country={"id"} value={ph} onChange={setPh} />
+                  <button onClick={onSignup} className="bg-emerald-600 flex gap-1  py-2.5 text-white rounded mt-2" style={{ backgroundColor: "black", width: "100px" }}>
+                    {loading && <CgSpinner size={20} className="mt-1 animate-spin" />}
+                    <span>Lanjut</span>
+                  </button>
+                </Card>
               </>
             )}
           </div>

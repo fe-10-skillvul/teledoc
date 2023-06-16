@@ -9,7 +9,7 @@ import PesanDokterPage from "./pages/PesanDokterPage";
 import Invoice from "./component/Invoice";
 import StatusPembPage from "./pages/StatusPembPage";
 import SpesialisasiPage from "./pages/SpesialisasiPage";
-import LoginPage from "./pages/LoginPage";
+import Login from "./component/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -30,7 +30,7 @@ function App() {
         <Route path="/pesan-dokter/:id" element={<PesanDokterPage />} />
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/payment-status" element={<StatusPembPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
