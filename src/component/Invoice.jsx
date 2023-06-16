@@ -13,7 +13,7 @@ const Invoice = () => {
       <Navbar className="navbar-invoice" style={{ background: "#40A9FF" }}>
         <Container>
           <Navbar.Brand href="#" className="ms-3">
-            <img src="/src/assets/img/logo/teledoc.png" alt="logo" className="logo" style={{ height: "38px" }} />
+            <img src="https://i.ibb.co/WFN1kzQ/logo.png" alt="logo" className="logo" style={{ height: "38px" }} />
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
@@ -28,7 +28,7 @@ const Invoice = () => {
             <div className="card-invoice">
               <div id="title">
                 <h3>Pembayaran sukses!</h3>
-                <img src="src\assets\img\check\check1.png" alt="Check" />
+                <img src="https://i.ibb.co/FsZd6kk/check1.png" alt="Check" />
               </div>
               <div id="subtitle">
                 <p>Konsultasi Dokter</p>

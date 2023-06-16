@@ -69,25 +69,25 @@ function PesanDokter() {
       </div>
       <div className="payment">
         <div className="payment-details">
-          <img src="/src/assets/img/payment/visa.png" alt="visa" />
+          <img src="https://i.ibb.co/L5Br6zm/visa.png" alt="visa" />
           <label className="payment-name">Transfer Bank</label>
           <input type="radio" id="visa" name="payment" value="visa" checked={selectedPayment === "visa"} onChange={handlePaymentChange} />
         </div>
 
         <div className="payment-details">
-          <img src="/src/assets/img/payment/dana.png" alt="dana" />
+          <img src="https://i.ibb.co/ZgwMTKM/dana.png" alt="dana" />
           <label className="payment-name">Dana</label>
           <input type="radio" id="dana" name="payment" value="dana" checked={selectedPayment === "dana"} onChange={handlePaymentChange} />
         </div>
 
         <div className="payment-details">
-          <img src="/src/assets/img/payment/gopay.png" alt="gopay" />
+          <img src="https://i.ibb.co/Prx2mC4/gopay.png" alt="gopay" />
           <label className="payment-name">Gopay</label>
           <input type="radio" id="gopay" name="payment" value="gopay" checked={selectedPayment === "gopay"} onChange={handlePaymentChange} />
         </div>
 
         <div className="payment-details">
-          <img src="/src/assets/img/payment/shopee-pay.png" alt="shopee pay" />
+          <img src="https://i.ibb.co/3fPmxvL/shopee-pay.png" alt="shopee pay" />
           <label className="payment-name">Shopee Pay</label>
           <input type="radio" id="shopee-pay" name="payment" value="shopee-pay" checked={selectedPayment === "shopee-pay"} onChange={handlePaymentChange} />
         </div>
